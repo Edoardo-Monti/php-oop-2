@@ -9,6 +9,8 @@ class Categories extends Product{
         parent::__construct($prezzo, $tipologia, $nome, $foto);
         $this -> animale = $animale;
     }
+
+    
 }
 
 

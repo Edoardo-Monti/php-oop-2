@@ -11,6 +11,7 @@ class Product{
         $this -> foto = $foto;
         $this -> tipologia = $tipologia;
         $this -> nome = $nome;
+        
     }
 
     

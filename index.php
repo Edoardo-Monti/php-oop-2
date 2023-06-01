@@ -17,11 +17,12 @@ require_once __DIR__ . '/database/db.php';
     <title>Negozio Animali</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-    <?php foreach( $arrayProdotti as $elem ) { ?>
+    <div class="d-flex justify-content-around">
+        <?php foreach( $arrayProdotti as $elem ) { ?>
 
         <div class="card" style="width: 18rem;">
             <img src="<?php echo $elem->foto?>" class="card-img-top" alt="">
@@ -30,9 +31,20 @@ require_once __DIR__ . '/database/db.php';
                 <p class="card-text"> <?php echo $elem-> tipologia?></p>
                 <span> <?php echo $elem-> prezzo?></span>
             </div>
-        </div>
+            <div>
+                <?php if($elem->animale == "cane"){?>
+                <i class="fa-solid fa-dog"></i>
+                <?php }else{ ?>
+                <i class="fa-solid fa-cat"></i>
+                <?php } ?>
 
-    <?php } ?>
+                
+            </div>
+        </div>
+        <?php } ?>
+
+
+    </div>
 
 
 
