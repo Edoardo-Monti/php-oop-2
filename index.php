@@ -29,7 +29,7 @@ require_once __DIR__ . '/database/db.php';
             <div class="card-body">
                 <h5 class="card-title"> <?php echo $elem->nome?></h5>
                 <p class="card-text"> <?php echo $elem-> tipologia?></p>
-                <span> <?php echo $elem-> prezzo?></span>
+                <span> <?php echo $elem-> price?></span>
             </div>
             <div>
                 <?php if($elem->animale == "cane"){?>
